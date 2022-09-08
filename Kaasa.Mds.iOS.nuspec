@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Kaasa.Mds.iOS</id>
+    <version>1.0.0</version>
+    <title>Xamarin and .NET MAUI wrapper around the Movesense mobile lib for iOS.</title>
+    <authors>Kaasa solution GmbH</authors>
+    <projectUrl>https://github.com/kaasa-solution/Kaasa.Mds.iOS</projectUrl>
+    <description>Xamarin and .NET MAUI wrapper around the Movesense mobile lib for iOS.</description>
+    <releaseNotes>https://github.com/kaasa-solution/Kaasa.Mds.iOS</releaseNotes>
+    <copyright>© 2022 Kaasa solution GmbH. – All rights reserved.</copyright>
+    <tags>xamarin, xamarin.forms, maui, .net, android, ios, plugin</tags>
+    <repository url="https://github.com/kaasa-solution/Kaasa.Mds.iOS" />
+    <dependencies>
+      <group targetFramework="Xamarin.iOS1.0" />
+      <group targetFramework="net6.0-ios15.4">
+        <dependency id="System.Runtime.InteropServices.NFloat.Internal" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing.Common.dll" targetFramework="Xamarin.iOS1.0" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="Kaasa.Mds.iOS/build/Xamarin/xamarin.ios10/Kaasa.Mds.iOS.dll" target="lib/xamarinios10/Kaasa.Mds.iOS.dll" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.dll" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.dll" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/manifest" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/manifest" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MDS.h" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MDS.h" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MovesenseApi-Swift.h" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MovesenseApi-Swift.h" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MovesenseApi.h" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Headers/MovesenseApi.h" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Info.plist" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Info.plist" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/MovesenseApi" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/MovesenseApi" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/module.modulemap" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/module.modulemap" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/arm64-apple-ios.swiftdoc" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/arm64-apple-ios.swiftdoc" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/arm64-apple-ios.swiftmodule" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/arm64-apple-ios.swiftmodule" />
+    <file src="Kaasa.Mds.iOS/build/NET/net6.0-ios/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo" target="lib/net6.0-ios15.4/Kaasa.Mds.iOS.resources/MovesenseApi.framework/Modules/MovesenseApi.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo" />
+  </files>
+</package>

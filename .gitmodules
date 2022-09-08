@@ -1,0 +1,3 @@
+[submodule "movesense-mobile-lib"]
+	path = movesense-mobile-lib
+	url = https://bitbucket.org/movesense/movesense-mobile-lib.git
