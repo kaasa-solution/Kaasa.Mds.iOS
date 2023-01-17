@@ -12,7 +12,7 @@ partial interface Constants
     [Field("MovesenseApiVersionNumber", "__Internal")]
     double MovesenseApiVersionNumber { get; }
 
-    // extern const unsigned char [] MovesenseApiVersionString;
+    // extern const unsigned char[] MovesenseApiVersionString;
     [Field("MovesenseApiVersionString", "__Internal")]
     IntPtr MovesenseApiVersionString { get; }
 
@@ -95,7 +95,7 @@ interface MDSTunnelResponse
 
     // -(instancetype _Nonnull)initWithStatus:(NSInteger)status response:(NSString * _Nonnull)response;
     [Export("initWithStatus:response:")]
-    IntPtr Constructor(nint status, string response);
+    NativeHandle Constructor(nint status, string response);
 }
 
 // @interface MDSTunnelRequest : NSObject
@@ -140,11 +140,11 @@ interface MDSResourceRequestResponse
 
     // -(instancetype _Nonnull)initWithStatus:(NSInteger)status message:(NSString * _Nonnull)response;
     [Export("initWithStatus:message:")]
-    IntPtr Constructor(nint status, string response);
+    NativeHandle Constructor(nint status, string response);
 
     // -(instancetype _Nonnull)initWithStatus:(NSInteger)status streamData:(NSData * _Nonnull)response;
     [Export("initWithStatus:streamData:")]
-    IntPtr Constructor(nint status, NSData response);
+    NativeHandle Constructor(nint status, NSData response);
 }
 
 // @interface MDSResourceRequest : NSObject
@@ -207,7 +207,7 @@ interface MDSWrapper
 
     // -(instancetype _Nonnull)init:(NSBundle * _Nonnull)configBundle centralManager:(CBCentralManager * _Nullable)centralManager deviceUUIDs:(NSArray<NSUUID *> * _Nullable)deviceUUIDs;
     [Export("init:centralManager:deviceUUIDs:")]
-    IntPtr Constructor(NSBundle configBundle, [NullAllowed] CBCentralManager centralManager, [NullAllowed] NSUuid[] deviceUUIDs);
+    NativeHandle Constructor(NSBundle configBundle, [NullAllowed] CBCentralManager centralManager, [NullAllowed] NSUuid[] deviceUUIDs);
 
     // -(void)connectPeripheralWithUUID:(NSUUID * _Nonnull)uuid;
     [Export("connectPeripheralWithUUID:")]
