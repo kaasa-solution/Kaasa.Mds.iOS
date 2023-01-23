@@ -27,6 +27,8 @@
 		<IsBindingProject>true</IsBindingProject>
 		<PackOnBuild>true</PackOnBuild>
 		<UseMaui>true</UseMaui>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -42,6 +44,11 @@
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="" />
+		<None Include="..\README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+	
 	<!-- MovesenseApi.framework -->
 	<ItemGroup>
 		<NativeReference Include="../movesense-mobile-lib/IOS/Movesense/Release-iphoneos/libmds.a">
