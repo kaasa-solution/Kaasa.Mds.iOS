@@ -1,39 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net7.0-ios</TargetFramework>
-		<NeutralLanguage>en</NeutralLanguage>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Version>1.2.0</Version>
-		<AssemblyVersion>1.2.0</AssemblyVersion>
-		<AssemblyFileVersion>1.2.0</AssemblyFileVersion>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Version>1.2.1</Version>
+		<AssemblyVersion>1.2.1</AssemblyVersion>
+		<AssemblyFileVersion>1.2.1</AssemblyFileVersion>
+		<PackageId>Kaasa.Mds.iOS</PackageId>
 		<AssemblyName>Kaasa.Mds.iOS</AssemblyName>
 		<RootNamespace>Kaasa.Mds.iOS</RootNamespace>
-		<PackageId>Kaasa.Mds.iOS</PackageId>
-		<Product>$(AssemblyName) ($(TargetFramework))</Product>
-		<Authors>Kaasa solution GmbH</Authors>
-		<Title>.NET MAUI wrapper around the Movesense mobile lib for iOS.</Title>
-		<Summary>.NET MAUI wrapper around the Movesense mobile lib for iOS.</Summary>
-		<Description>.NET MAUI wrapper around the Movesense mobile lib for iOS.</Description>
-		<Copyright>© 2023 Kaasa solution GmbH. – All rights reserved.</Copyright>
-		<RepositoryUrl>https://github.com/kaasa-solution/Kaasa.Mds.iOS</RepositoryUrl>
 		<Owners>Kaasa</Owners>
+		<Authors>Kaasa solution GmbH</Authors>
+		<Product>$(AssemblyName) ($(TargetFramework))</Product>
+		<Title>.NET wrapper around the Movesense mobile lib for iOS.</Title>
+		<Summary>.NET wrapper around the Movesense mobile lib for iOS.</Summary>
+		<Description>.NET wrapper around the Movesense mobile lib for iOS.</Description>
+		<Copyright>© 2023 Kaasa solution GmbH. – All rights reserved.</Copyright>
+		<PackageTags>plugin, .net, movesense</PackageTags>
+		<RepositoryUrl>https://github.com/kaasa-solution/Kaasa.Mds.iOS</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/kaasa-solution/Kaasa.Mds.iOS</PackageProjectUrl>
-		<PackageTags>maui, .net, android, ios, plugin</PackageTags>
 		<PackageReleaseNotes>https://github.com/kaasa-solution/Kaasa.Mds.iOS</PackageReleaseNotes>
 		<DefineConstants>$(DefineConstants);</DefineConstants>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<IsBindingProject>true</IsBindingProject>
+		<RepositoryType>git</RepositoryType>
 		<PackOnBuild>true</PackOnBuild>
-		<UseMaui>true</UseMaui>
-		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<IsBindingProject>true</IsBindingProject>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="" />
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Remove="SharpieGenerated\ApiDefinitions.cs" />
@@ -44,11 +46,6 @@
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<None Include="..\LICENSE.md" Pack="true" PackagePath="" />
-		<None Include="..\README.md" Pack="true" PackagePath="" />
-	</ItemGroup>
-	
 	<!-- MovesenseApi.framework -->
 	<ItemGroup>
 		<NativeReference Include="../movesense-mobile-lib/IOS/Movesense/Release-iphoneos/libmds.a">
