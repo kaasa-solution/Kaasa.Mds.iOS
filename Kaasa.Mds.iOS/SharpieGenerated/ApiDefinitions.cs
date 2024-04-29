@@ -10,14 +10,6 @@ namespace Kaasa.Mds.iOS
     [Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
-        // extern double MovesenseApiVersionNumber;
-        [Field("MovesenseApiVersionNumber", "__Internal")]
-        double MovesenseApiVersionNumber { get; }
-
-        // extern const unsigned char[] MovesenseApiVersionString;
-        [Field("MovesenseApiVersionString", "__Internal")]
-        byte[] MovesenseApiVersionString { get; }
-
         // extern NSString *const _Nonnull MovesenseServiceUUID;
         [Field("MovesenseServiceUUID", "__Internal")]
         NSString MovesenseServiceUUID { get; }
